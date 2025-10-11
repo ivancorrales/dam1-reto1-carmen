@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class AnalisisNombre {
-    public static void Analizar(String palabra){
+    public static void analizar(String palabra){
         palabra = palabra.trim();
         int longitud = palabra.length();
         System.out.printf("La palabra introducida tiene %d caracteres.%n", longitud);
@@ -18,7 +18,7 @@ public class AnalisisNombre {
         Scanner sc = new Scanner(System.in);
         System.out.printf("Introduce una palabra: ");
         String palabra = sc.nextLine();
-        Analizar(palabra);
+        analizar(palabra);
 
         sc.close();
     }
