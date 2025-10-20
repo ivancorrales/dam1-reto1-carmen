@@ -15,8 +15,7 @@ public class EdadRestante{
         if(edad<0){
             System.out.println("Edad no válida");
             System.exit(1);
-        }
-        if(edad>=100){
+        }else if(edad>=100){
             int pasado100 = desde100(edad);
             System.out.printf("Ya has llegado a los 100 años, tienes %d años más de 100", pasado100);
         }else{
