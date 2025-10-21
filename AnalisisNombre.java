@@ -1,6 +1,10 @@
 import java.util.Scanner;
 
 public class AnalisisNombre {
+
+    static boolean empiezaConVocal(String palabra) {
+        return palabra != null && palabra.matches("^(?i)[aeiouáéíóúü].*");
+    }
     public static void analizar(String palabra){
         palabra = palabra.trim();
         int longitud = palabra.length();
@@ -8,7 +12,7 @@ public class AnalisisNombre {
         System.out.println("La primera letra de la palabra introducida es: "+ palabra.charAt(0));
         System.out.println("La última letra de la palabra introducida es: " + palabra.charAt(longitud-1));
         palabra = palabra.toLowerCase();
-        if(palabra.charAt(0) == 'a' || palabra.charAt(0) == 'e' || palabra.charAt(0) == 'i' || palabra.charAt(0) == 'o' || palabra.charAt(0) == 'u'){
+        if(empiezaConVocal(palabra)){
             System.out.println("La palabra introducida empieza por vocal");
         }else{
             System.out.println("La palabra introducida no empieza por vocal");
