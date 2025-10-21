@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class EdadRestante{
+    public static int hasta100(int edad){
+        return 100-edad;
+    }
+    public static int desde100(int edad){
+        return edad-100;
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Introduce tu edad: ");
+        int edad = sc.nextInt();
+        int resultado = hasta100(edad);
+        if(edad<0){
+            System.out.println("Edad no válida");
+            System.exit(1);
+        }else if(edad>=100){
+            int pasado100 = desde100(edad);
+            System.out.printf("Ya has llegado a los 100 años, tienes %d años más de 100", pasado100);
+        }else{
+            System.out.printf("Te faltan %d años para llegar a los 100.", resultado);
+        }
+        sc.close();
+    }
+}
